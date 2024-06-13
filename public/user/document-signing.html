@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Signing - SecureFinance Solutions Ltd.</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="main-menu">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../learn.html">Learn</a></li>
+                <li><a href="../news.html">News</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Document Signing</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard Home</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="document-management.html">Document Management</a></li>
+                <li><a href="communication-portal.html">Communication Portal</a></li>
+                <li><a href="document-signing.html">Document Signing</a></li>
+                <li><a href="encryption-demo.html">Encryption Demo</a></li>
+                <li><a href="reporting-analytics.html">Reporting & Analytics</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Secure Document Signing</h2>
+            <p>Sign documents securely and ensure legal compliance.</p>
+            <h2>Sign a Document</h2>
+            <form id="sign-document-form" enctype="multipart/form-data">
+                <label for="document">Select Document:</label>
+                <input type="file" id="document" name="document" required>
+                <button type="submit">Sign Document</button>
+            </form>
+            <h2>Signed Documents</h2>
+            <ul id="signed-documents">
+                <!-- List of signed documents will be populated here -->
+            </ul>
+        </section>
+    </main>
+    <footer class="footer-menu">
+        <p>&copy; Capstone Project 2024</p>
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="regulatory.html">Regulatory</a>
+    </footer>
+    <script>
+        document.getElementById('sign-document-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            try {
+                const response = await fetch('http://localhost:3000/api/sign-document', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                if (result.success) {
+                    alert('Document signed successfully');
+                    const li = document.createElement('li');
+                    li.textContent = result.filename;
+                    document.getElementById('signed-documents').appendChild(li);
+                } else {
+                    alert('Failed to sign document');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while signing the document');
+            }
+        });
+    </script>
+</body>
+</html>

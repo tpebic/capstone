@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - SecureFinance Solutions Ltd.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Error</h1>
+        <p>Sorry, something went wrong. Please try again later or contact support if the issue persists.</p>
+    </main>
+    <footer class="footer-menu">
+        <p>&copy; Capstone Project 2024</p>
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="regulatory.html">Regulatory</a>
+    </footer>
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+            sessionStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

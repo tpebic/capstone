@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - SecureFinance Solutions Ltd.</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="main-menu">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../learn.html">Learn</a></li>
+                <li><a href="../news.html">News</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Messages</h1>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Admin Home</a></li>
+                <li><a href="logs.html">Logs</a></li>
+                <li><a href="user-management.html">User Management</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="audit-trail.html">Audit Trail</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>View Messages</h2>
+            <!-- Messages content goes here -->
+        </section>
+    </main>
+    <footer class="footer-menu">
+        <p>&copy; Capstone Project 2024</p>
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="regulatory.html">Regulatory</a>
+    </footer>
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+            sessionStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

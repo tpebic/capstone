@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+/* Main menu links */
+header.main-menu ul li a {
+  color: white;
+}
+
+header.main-menu ul li a:hover {
+  color: lightgray;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Footer links */
+footer.footer-menu a {
+  color: white;
+}
+
+footer.footer-menu a:hover {
+  color: lightgray;
+}
+
+/* Additional styles for the contact page */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+#success-message {
+  text-align: center;
+  color: green;
+  margin-top: 1rem;
+}
+
+/* Admin dashboard and user dashboard menu links */
+body.admin-dashboard nav ul li a,
+body.user-dashboard nav ul li a {
+  color: blue;
+}
+
+body.admin-dashboard nav ul li a:hover,
+body.user-dashboard nav ul li a:hover {
+  color: darkblue;
+}

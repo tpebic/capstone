@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - SecureFinance Solutions Ltd.</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="main-menu">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../learn.html">Learn</a></li>
+                <li><a href="../news.html">News</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+<h1>Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard Home</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="document-management.html">Document Management</a></li>
+                <li><a href="communication-portal.html">Communication Portal</a></li>
+                <li><a href="document-signing.html">Document Signing</a></li>
+                <li><a href="encryption-demo.html">Encryption Demo</a></li>
+                <li><a href="reporting-analytics.html">Reporting & Analytics</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Manage Profile</h2>
+            <p>Update your profile information and settings.</p>
+            <form id="profile-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer-menu">
+        <p>&copy; Capstone Project 2024</p>
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="regulatory.html">Regulatory</a>
+    </footer>
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+            sessionStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
